@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pantallaPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_marvel_background"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="373dp"
+        android:layout_height="87dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:text="Aplicaciones móviles y servicios telemáticos"
+        android:textAllCaps="true"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <TextView
+        android:layout_width="298dp"
+        android:layout_height="41dp"
+        android:gravity="center_horizontal"
+        android:text="Examen práctico primer parcial"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:text="Integrantes:"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="225dp"
+        android:layout_height="75dp"
+        android:gravity="center_horizontal"
+        android:text="Alexander Martínez Jefferson Castillo"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724" />
+
+
+
+    <EditText
+        android:id="@+id/tx_Heroe"
+        android:layout_width="213dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:hint="Escriba el nombre del héroe..."
+        android:background="@drawable/estilo_borde_redondeado_edittext"
+        android:textColor="#6E6E6E"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="582dp" />
+
+    <ImageButton
+        android:id="@+id/btn_Buscar"
+        android:layout_width="57dp"
+        android:layout_height="48dp"
+        android:background="null"
+        android:scaleType="fitCenter"
+        android:onClick="irVentanaResultados"
+        app:srcCompat="@drawable/lupaheroes"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="582dp" />
+
+
+    tools:layout_editor_absoluteX="30dp"
+    tools:layout_editor_absoluteY="90dp" />
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.105" />
+
+    <!--<LinearLayout
+        android:id="@+id/question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="240dp"/>-->
+
+</android.support.constraint.ConstraintLayout>
