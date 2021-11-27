@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity{
 
     public void LeerWs(){
         String url = "https://www.superheroapi.com/api.php/4566920693344448/search/"+textoHeroe.getText().toString();
-
+        listaHeroes.add("Se ejecuto LeerWS");
 
         StringRequest postRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity{
                     JSONObject jsonObject = new JSONObject(response);
 
                     listaHeroes.add(jsonObject.getString("name"));
-                    listaHeroes.add("se ejecuto el WS");
+                    listaHeroes.add("Se agregaron los nombres");
                     //System.out.println("Lista de Heroes encontrados: \n" + nombreHeroes);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -85,13 +85,14 @@ public class MainActivity extends AppCompatActivity{
 
             }
         });
+        Volley.newRequestQueue()
     }
 
     public void irVentanaResultados(View v) {
         Intent ventanaResultados = new Intent(getBaseContext(), ventanaResultados.class);
         LeerWs();
         //ventanaResultados.putExtra("token",token);
-        ventanaResultados.putExtra("lista", String.valueOf(this.listaHeroes));
+        //ventanaResultados.putExtra("lista", String.valueOf(this.listaHeroes));
 
 
         startActivity(ventanaResultados);

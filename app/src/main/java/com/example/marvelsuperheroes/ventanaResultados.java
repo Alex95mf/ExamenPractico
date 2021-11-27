@@ -36,7 +36,7 @@ public class ventanaResultados extends AppCompatActivity{
         listaPrueba2.add("valor prueba 1");
         listaPrueba2.add("valor prueba 2");
         listaPrueba2.add("valor prueba 3");
-        listaDeHeroes.add("pruebita");
+        MainActivity.listaHeroes.add("pruebita");
 
         //Intent intent = getIntent();
         //Bundle bundle = intent.getExtras();
