@@ -18,7 +18,7 @@ public class ventanaResultados extends AppCompatActivity{
     //private RequestQueue mQueue;
     //private String token = "";
     ListView listView2;
-    ListView listView;
+    public static ListView listView;
     List<String> listaPrueba2 = new ArrayList<>();
     public List<String> listaDeHeroes = new ArrayList<>();
     ArrayAdapter<String> mAdapter2;

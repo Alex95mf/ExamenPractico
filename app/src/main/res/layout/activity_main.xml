@@ -92,8 +92,8 @@
         android:layout_width="57dp"
         android:layout_height="48dp"
 
-        android:scaleType="fitCenter"
         android:onClick="irVentanaResultados"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/lupaheroes"
         tools:ignore="MissingConstraints,OnClick,SpeakableTextPresentCheck"
         tools:layout_editor_absoluteX="282dp"
