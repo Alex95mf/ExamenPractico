@@ -5,35 +5,12 @@
     android:layout_height="match_parent"
     android:background="#F2D11C1C">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Resultados de búsqueda:"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="27dp" />
-
     <ListView
         android:layout_width="344dp"
         android:layout_height="570dp"
         android:id="@+id/listView"
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="112dp" />
-
-    <EditText
-        android:id="@+id/ptext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="67dp" />
 
 
 </android.support.constraint.ConstraintLayout>

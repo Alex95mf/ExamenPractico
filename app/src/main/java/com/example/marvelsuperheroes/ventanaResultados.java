@@ -20,9 +20,10 @@ public class ventanaResultados extends AppCompatActivity{
     ListView listView2;
     public static ListView listView;
     List<String> listaPrueba2 = new ArrayList<>();
-    public List<String> listaDeHeroes = new ArrayList<>();
+    //public List<String> listaDeHeroes = new ArrayList<>();
     ArrayAdapter<String> mAdapter2;
     ArrayAdapter<String> mAdapter;
+    public static List<String> listaDeHeroes;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -19,6 +19,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity{
         botonBuscar = (ImageButton) findViewById(R.id.btn_Buscar);
         textoHeroe = (EditText) findViewById(R.id.tx_Heroe);
         mListView = findViewById(R.id.listView);
-        pText = (EditText) findViewById(R.id.ptext);
+
 
         // strHeroe = textoHeroe.getText().toString();
 
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity{
 //+textoHeroe.getText().toString()
     public void LeerWs(){
         String url = "https://www.superheroapi.com/api.php/4566920693344448/search/batman";
-        listaHeroes.add("Se ejecuto LeerWS");
+        //listaHeroes.add("Se ejecuto LeerWS");
 
 
         StringRequest postRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -79,12 +80,27 @@ public class MainActivity extends AppCompatActivity{
             public void onResponse(String response) {
                 listaHeroes.add("Antes de try");
                 try {
+
                     JSONObject jsonObject = new JSONObject(response);
-                    jsonObject.getString("name");
-                    listaHeroes.add(jsonObject.getString("results"));
-                    String nombres = jsonObject.getString("results");
-                    listaHeroes.add(nombres);
-                    pText.setText(jsonObject.getString("name"));
+                    JSONArray json = jsonObject.getJSONArray("results");
+                    for (int i = 0; i < json.length(); i++) {
+
+                        JSONObject object =(JSONObject) json.get(i);
+                        String name = object.get("name").toString();
+                        listaHeroes.add(name);
+                        if (name == "Batman II") {
+                            listaHeroes.add(name);
+                        }
+
+
+                    }
+
+
+
+                    //listaHeroes.add(jsonObject.getJSONArray("results"));
+                    //String nombres = jsonObject.getString("name");
+                    //listaHeroes.add(nombres);
+                    //pText.setText(jsonObject.getString("name"));
                     listaHeroes.add("Se agregaron los nombres");
 
                     //System.out.println("Lista de Heroes encontrados: \n" + nombreHeroes);
@@ -136,7 +152,7 @@ public class MainActivity extends AppCompatActivity{
         Intent ventanaResultados = new Intent(getBaseContext(), ventanaResultados.class);
         LeerWs();
         //ventanaResultados.putExtra("token",token);
-        //ventanaResultados.putExtra("lista", String.valueOf(this.listaHeroes));
+        //ventanaResultados.putExtra(,);
 
 
         startActivity(ventanaResultados);
