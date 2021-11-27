@@ -23,8 +23,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
+    //public static List<String> listaHeroes;
     private RequestQueue mQueue = null;
     //private String token = null;
     private EditText textoHeroe;
@@ -32,14 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton botonBuscar;
     private ListView mListView;
     //ArrayList nombreHeroes = new ArrayList();
-    List<String> listaHeroes = new ArrayList<>();
+    public static List<String> listaHeroes = new ArrayList<>();
+    List<String> listaPrueba = new ArrayList<>();
     ArrayAdapter<String> mAdapter;
 
 
     String token = "";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         //this.token = (String)4566920693344448;
 
         //mQueue = Volley.newRequestQueue(this);
+        listaPrueba.add("valor prueba 1");
+        listaPrueba.add("valor prueba 2");
+        listaPrueba.add("valor prueba 3");
 
         botonBuscar = (ImageButton) findViewById(R.id.btn_Buscar);
         textoHeroe = (EditText) findViewById(R.id.tx_Heroe);
@@ -57,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void LeerWs(){
+    public void LeerWs(){
         String url = "https://www.superheroapi.com/api.php/4566920693344448/search/"+textoHeroe.getText().toString();
 
 
@@ -67,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
 
-                    nombreHeroes.add(jsonObject.getString("name"));
+                    listaHeroes.add(jsonObject.getString("name"));
+                    listaHeroes.add("se ejecuto el WS");
                     //System.out.println("Lista de Heroes encontrados: \n" + nombreHeroes);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -83,9 +89,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void irVentanaResultados(View v) {
         Intent ventanaResultados = new Intent(getBaseContext(), ventanaResultados.class);
-        //ventanaResultados.putExtra("token",token);
-        //ventanaResultados.putExtra("textoHeroe",textoHeroe.getText().toString();
         LeerWs();
+        //ventanaResultados.putExtra("token",token);
+        ventanaResultados.putExtra("lista", String.valueOf(this.listaHeroes));
+
+
         startActivity(ventanaResultados);
     }
+
+
 }
