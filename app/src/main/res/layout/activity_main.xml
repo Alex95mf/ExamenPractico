@@ -15,15 +15,15 @@
         android:layout_width="373dp"
         android:layout_height="87dp"
         android:gravity="center_horizontal"
-        android:textColor="@color/white"
         android:text="Aplicaciones móviles y servicios telemáticos"
         android:textAllCaps="true"
+        android:textColor="@color/white"
         android:textSize="28dp"
         android:textStyle="bold"
         android:typeface="normal"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="78dp" />
+        tools:layout_editor_absoluteY="114dp" />
 
     <TextView
         android:layout_width="298dp"
@@ -37,7 +37,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.352" />
 
     <TextView
         android:id="@+id/textView"
@@ -91,23 +91,23 @@
         android:id="@+id/btn_Buscar"
         android:layout_width="57dp"
         android:layout_height="48dp"
-        android:background="null"
+
         android:scaleType="fitCenter"
         android:onClick="irVentanaResultados"
         app:srcCompat="@drawable/lupaheroes"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+        tools:ignore="MissingConstraints,OnClick,SpeakableTextPresentCheck"
         tools:layout_editor_absoluteX="282dp"
         tools:layout_editor_absoluteY="582dp" />
 
 
-    tools:layout_editor_absoluteX="30dp"
+    <!--tools:layout_editor_absoluteX="30dp"
     tools:layout_editor_absoluteY="90dp" />
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintHorizontal_bias="0.498"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.105" />
+    app:layout_constraintVertical_bias="0.105" />-->
 
     <!--<LinearLayout
         android:id="@+id/question_text_view"
